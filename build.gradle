@@ -1,0 +1,46 @@
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
+
+plugins {
+    id 'java-library'
+    id 'jacoco'
+    id 'org.sonarqube' version '5.1.0.4882'
+    id 'io.freefair.lombok' version '8.10.2'
+    id 'org.springframework.boot' version '3.3.5' apply false
+}
+
+group = 'com.patrick-shinn'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform(SpringBootPlugin.BOM_COORDINATES)
+    implementation 'org.springframework.boot:spring-boot-autoconfigure'
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    finalizedBy jacocoTestReport // report is always generated after tests run
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = true
+    }
+}
+
+sonar {
+    properties {
+        property 'sonar.projectKey', 'shinn5112_NOAA-Tides-Data-API-Client'
+        property 'sonar.organization', 'shinn5112'
+        property 'sonar.host.url', 'https://sonarcloud.io'
+    }
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
