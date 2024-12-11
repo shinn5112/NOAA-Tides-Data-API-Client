@@ -1,7 +1,9 @@
 package com.patrick.shinn.noaa.coop.data.client.request.parameters;
 
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode
 @Builder(builderClassName = "Builder")
 public class Application implements ApiParameter{
     private String name;

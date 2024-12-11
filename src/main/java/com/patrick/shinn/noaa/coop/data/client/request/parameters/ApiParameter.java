@@ -1,5 +1,10 @@
 package com.patrick.shinn.noaa.coop.data.client.request.parameters;
 
+/**
+ * Interface for common API GET parameter functions.
+ * @since 1.0.0
+ * @author Patrick Shinn
+ */
 public interface ApiParameter {
     /** Gets the selected enum value for the parameter. */
     String getValue();

@@ -19,6 +19,7 @@ repositories {
 dependencies {
     implementation platform(SpringBootPlugin.BOM_COORDINATES)
     implementation 'org.springframework.boot:spring-boot-autoconfigure'
+    implementation 'org.springframework.boot:spring-boot-starter-logging'
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 

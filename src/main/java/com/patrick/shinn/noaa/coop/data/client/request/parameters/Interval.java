@@ -28,7 +28,9 @@ public enum Interval implements ApiParameter {
     THIRTY_MINUTES("30"),
     SIXTY_MINUTES("60"),
     /** Tide predictions for high tide and low tide times and heights. */
-    HI_LOW("hilo");
+    HI_LOW("hilo"),
+    /** max flood, slack water, and max ebb currents */
+    MAX_SLACK("max_slack");
 
     private final String value;
 

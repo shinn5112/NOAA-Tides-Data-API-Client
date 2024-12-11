@@ -2,6 +2,7 @@ package com.patrick.shinn.noaa.coop.data.client.request.parameters;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 /**
