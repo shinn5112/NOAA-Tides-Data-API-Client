@@ -35,7 +35,7 @@ public class CoOpsClient {
     }
 
     public void makeRequestAsync(ApiDataRequest request){
-
+        // TODO implement
     }
 
     private HttpRequest buildRequest(ApiDataRequest apiDataRequest) throws URISyntaxException {

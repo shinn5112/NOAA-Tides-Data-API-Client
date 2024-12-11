@@ -86,8 +86,8 @@ public enum WaterData implements ApiDataProductParameter {
             if (actualParameters.containsKey(waterDataParameter.getParameter()) || waterDataParameter.isOptional) {
                 if ( // ensure key is not optional and missing
                     actualParameters.containsKey(waterDataParameter.getParameter())
-                    // any value not allowed
-                    && waterDataParameter.values != Collections.EMPTY_LIST
+                    // any value not allowed, if the values list is empty we accept any value
+                    && waterDataParameter.values.isEmpty()
                     // parameter value allowed
                     && !waterDataParameter.values.contains(actualParameters.get(waterDataParameter.getParameter()))
                 ) { // the parameter is passed with an invalid value
