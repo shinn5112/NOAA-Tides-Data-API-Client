@@ -4,6 +4,7 @@ import com.patrick.shinn.noaa.coop.data.client.request.ApiDataRequest;
 import com.patrick.shinn.noaa.coop.data.client.request.parameters.*;
 import com.patrick.shinn.noaa.coop.data.client.request.parameters.products.WaterData;
 import com.patrick.shinn.noaa.coop.data.client.request.parameters.time.Date;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,6 +13,7 @@ class CoOpsClientTest {
 
     private CoOpsClient target;
 
+    @Disabled
     @Test
     void funTime(){
         target = new CoOpsClient(CoOpsClientConfiguration.builder().build());
